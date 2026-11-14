@@ -4,7 +4,7 @@
   "problem": "Friends can start a competitive match without assembling two full teams. CPU players fill empty sports seats while human winners can share a Testnet stake.",
   "links": {
     "live": [],
-    "contracts": []
+    "contracts": ["https://testnet.nearblocks.io/address/arcade-escrow-c4f30e33.testnet"]
   },
   "userFlow": [
     "Run npm ci and npm run dev, then open http://localhost:3000.",
