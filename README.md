@@ -1,10 +1,12 @@
 # Dungeon Stake · Arcade
 
-Dungeon Stake is a top-down 5v5 browser arena. Five heroes play against five monsters in Football and Ice Hockey.
+Dungeon Stake is a browser arcade for quick matches with friends. Play Football, Ice Hockey, or Dungeon Fighters free, or set a NEAR Testnet stake in a friend room.
 
-**Dungeon Fighters** is a separate 1v1 cabinet with six fighters. Open `/fighters`, pick a fighter, and select **Fight CPU** or create a room for a friend. Both players ready up before the first round and agree to an online rematch. The first to win two rounds takes the match. Each round runs for up to 60 seconds. Ties can extend the match to five rounds.
+![Dungeon Stake Arcade game selection with Football, Ice Hockey, and Dungeon Fighters](docs/screenshots/lineup.jpg)
 
-Use the arrow keys to move, jump, and block. Press Z for a light attack, X for a heavy attack, and C for a special when the meter has at least 35 points. WASD and touch controls also work. The cabinet uses original pixel sprites with six poses per fighter.
+| Football and Ice Hockey | Dungeon Fighters |
+| --- | --- |
+| Play 5v5 with friends and CPU teammates. With four friends, the host can split them 2–2 and fill the six open seats with bots. | Play 1v1 against a friend or the CPU. Choose from six fighters and win two rounds to take the duel. |
 
 ## Play locally
 
@@ -23,6 +25,14 @@ Move with WASD, arrow keys, or the touch direction pad. Space or the touch actio
 - Ice Hockey: skate across the rink, bank the puck off the boards, and shoot.
 
 The first team to reach the mode target wins: 10 football goals or 7 hockey goals. If time runs out first, the higher score after three minutes wins. A tie goes to 30 seconds of sudden death. The next score wins, or the match ends in a draw if nobody scores.
+
+In Dungeon Fighters, use the arrow keys, WASD, or touch controls to move, jump, and block. Press **Z** for a light attack, **X** for a heavy attack, or **C** for a special when the meter has at least 35 points. Each round lasts up to 60 seconds. Free online rematches require both players to ready up again.
+
+| Football | Ice Hockey |
+| --- | --- |
+| ![Football match with ten players and the live score](docs/screenshots/football.jpg) | ![Ice Hockey match with ten players on the rink](docs/screenshots/hockey.jpg) |
+
+![Iona and Sable trading hits in Dungeon Fighters](docs/screenshots/fighters.jpg)
 
 ## NEAR Testnet demo
 
@@ -43,5 +53,7 @@ Paid lobbies expire after 15 minutes. If a match never settles, the original wal
 The lobby and match API run in one long-lived Node process. The server owns gameplay and attests to results as the trusted Testnet referee. The contract verifies locked deposits, calculates payouts, and holds balances for withdrawal. Room state resets on restart, while funds and refund deadlines remain on-chain. The browser draws the arenas on Canvas 2D. Each tab has its own seat.
 
 The pitch and characters reuse the project's original native sprite sheets under `public/assets/sprites`.
+
+The arcade uses Next.js, React, Tailwind CSS, Canvas 2D, NEAR Wallet Selector, and near-sdk-js. The game covers and arcade artwork were created with ImageGen.
 
 Run `npm test` for match rules and `npm run test:http` with the local server running for shared room and movement checks.

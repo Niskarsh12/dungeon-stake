@@ -17,6 +17,11 @@
   ],
   "media": {
     "videos": [],
-    "screenshots": []
+    "screenshots": [
+      { "label": "Arcade game selection", "url": "https://raw.githubusercontent.com/Niskarsh12/dungeon-stake/main/docs/screenshots/lineup.jpg" },
+      { "label": "5v5 Football", "url": "https://raw.githubusercontent.com/Niskarsh12/dungeon-stake/main/docs/screenshots/football.jpg" },
+      { "label": "5v5 Ice Hockey", "url": "https://raw.githubusercontent.com/Niskarsh12/dungeon-stake/main/docs/screenshots/hockey.jpg" },
+      { "label": "Dungeon Fighters", "url": "https://raw.githubusercontent.com/Niskarsh12/dungeon-stake/main/docs/screenshots/fighters.jpg" }
+    ]
   }
 }
